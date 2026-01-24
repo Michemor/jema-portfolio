@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelle Jemator | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MJ</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm Michelle Jemator</h1>
+            <p class="subtitle">Computer Science Student | Software Developer | Aspiring Data Scientist </p>
+            <p>Passionate about Software Development and Machine Learning. Currently in my 4th year at Daystar University, building solutions that make a difference.</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+            <a href="#projects" class="btn btn-outline">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Get to know more about who I am and what drives me</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <div class="image-placeholder">
+                    <img src="jemaportfolio.jpg" alt="Michelle Jemator">
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>A Passionate Developer</h3>
+                <p>I am a 4th year Computer Science student at Daystar University with a deep passion for technology. My journey in tech has led me to explore various domains, with a particular focus on Software Development and Machine Learning.</p>
+                <p>I believe in continuous learning and staying updated with the latest technologies. My goal is to create innovative solutions that solve real-world problems and make technology accessible to everyone.</p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Daystar University</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-book"></i>
+                        <span>Computer Science</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>4th Year Student</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kenya</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-title">
+            <h2>My Skills</h2>
+            <p>Technologies and tools I work with</p>
+        </div>
+        <div class="skills-table-container">
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th>Skill Area</th>
+                        <th>Technologies/Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mobile Development</td>
+                        <td>Flutter (iOS & Android)</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>HTML, CSS, JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>Database Management</td>
+                        <td>MySQL, PostgreSQL</td>
+                    </tr>
+                    <tr>
+                        <td>Python Development</td>
+                        <td>Applications, Data Analysis</td>
+                    </tr>
+                    <tr>
+                        <td>Version Control</td>
+                        <td>Git, GitHub</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-title">
+            <h2>My Projects</h2>
+            <p>View some of my works </p>
+        </div>
+        <div class="projects-grid">
+            <!------ project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="project-info">
+                    <h3><a href="https://github.com/Michemor/Daystar-SDG-Impact-and-Evidence-Generator" target="_blank">Daystar SDG Impact and Evidence Generator</a></h3>
+                    <p>JavaScript project for generating impact and evidence reports for SDGs at Daystar University.</p>
+                    <div class="project-tags">
+                        <span>React </span>
+                        <span>TailwindCSS </span>
+                        <span>Django </span>
+                    </div>
+                </div>
+            </div>
+            <!------ project 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-store"></i>
+                </div>
+                <div class="project-info">
+                    <h3><a href="https://github.com/Michemor/tech-today-sales-frontend" target="_blank">Tech Today Sales Frontend</a></h3>
+                    <p>Frontend for a sales management system, built with modern JavaScript frameworks.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Material UI</span>
+                        <span>Frontend</span>
+                    </div>
+                </div>
+            </div>
+            <!------ project 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="project-info">
+                    <h3><a href="https://github.com/Michemor/tech-today-sales-backend" target="_blank">Tech Today Sales Backend</a></h3>
+                    <p>Backend API for Tech Today Sales, built with Python for robust data management.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Backend</span>
+                    </div>
+                </div>
+            </div>
+
+            <!------ project 4 ------>
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-info">
+                    <h3><a href="https://github.com/Michemor/GBV_tweet_classification" target="_blank">GBV Tweet Classification</a></h3>
+                    <p>Machine learning project for classifying tweets related to Gender-Based Violence using Jupyter Notebook.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>ML</span>
+                    </div>
+                </div>
+            </div>
+
+            <!------ project 5 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="project-info">
+                    <h3><a href="https://github.com/Michemor/motor-gi.io" target="_blank">Motor GI.io</a></h3>
+                    <p>Python project for motor insurance and management.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="project-info">
+                    <h3><a href="https://github.com/Michemor/Dorcas_Pantry" target="_blank">Dorcas Pantry</a></h3>
+                    <p>Dart project for project management and inventory tracking.</p>
+                    <div class="project-tags">
+                        <span>Dart</span>
+                        <span>Flutter</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's Connect!</h3>
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:yatoijema@gmail.com">yatoijema@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Phone</strong><br>
+                        <a href="tel:+254759091684">+254 759 091 684</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Location</strong><br>
+                        Kenya
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/michemor" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Michelle Jemator. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
