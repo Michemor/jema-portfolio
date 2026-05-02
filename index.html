@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michelle Jemator | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Michelle Jemator | Software Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="logo">MJ</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+    <nav id="navbar">
+        <a href="#home" class="logo">MJ.</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger" onclick="toggleMenu()">
+        <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
@@ -28,47 +31,75 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Hi, I'm Michelle Jemator</h1>
-            <p class="subtitle">Computer Science Student | Software Developer | Aspiring Data Scientist </p>
-            <p>Creating innovative solutions that empower people through technology.</p>
-            <a href="#contact" class="btn">Get In Touch</a>
-            <a href="#projects" class="btn btn-outline">View My Work</a>
+        <div class="hero-content fade-in">
+            <span class="hero-badge">Welcome to my portfolio</span>
+            <h1>Hi, I'm Michelle Jemator <span><br>Software Developer</span></h1>
+            <p>Computer Science student passionate about crafting digital solutions through Web Development, Mobile
+                Apps, and Data Science.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="section-title">
+    <section id="about">
+        <div class="section-header fade-in">
             <h2>About Me</h2>
-            <p>Get to know more about who I am and what drives me</p>
+            <p>Get to know more about who I am and what drives me.</p>
         </div>
-        <div class="about-content">
+        <div class="about-grid fade-in">
             <div class="about-image">
-                <div class="image-placeholder">
-                    <img src="jemaportfolio.jpg" alt="Michelle Jemator">
-                </div>
+                <img src="jemaportfolio.jpg" alt="Michelle Jemator">
             </div>
             <div class="about-text">
                 <h3>A Passionate Developer</h3>
-                <p>I am a 4th year Computer Science student at Daystar University with a deep passion for technology. My journey in tech has led me to explore various domains, with a particular focus on Software Development and Machine Learning.</p>
-                <p>I believe in continuous learning and staying updated with the latest technologies. My goal is to create innovative solutions that solve real-world problems and make technology accessible to everyone.</p>
-                <div class="info-grid">
-                    <div class="info-item">
+                <p>Hi, I'm Michelle, a Full-Stack Developer and recent Applied Computer Science graduate dedicated to
+                    building scalable, data-driven solutions tailored for Africa's evolving tech landscape. While my
+                    tech
+                    journey began with a strong focus on intuitive frontend design, my drive to build more powerful
+                    applications led me to expand my expertise into backend infrastructure and data analytics, recently
+                    culminating in an ALX certification. </p>
+
+                <p> Drawing on my hands-on experience building full-stack data
+                    collection tools and integrating AI-powered chatbots that drive real business productivity, my focus
+                    is
+                    now on leveraging full-stack engineering alongside machine learning to build intelligent,
+                    high-impact
+                    systems. Whether designing interactive dashboards, architecting robust backends, or exploring new AI
+                    integrations, I am passionate about tackling complex problems to create technology that addresses
+                    unique challenges across the continent. Let's connect and build something impactful together.
+                </p>
+
+                <div class="info-cards">
+                    <div class="info-card">
                         <i class="fas fa-graduation-cap"></i>
-                        <span>Daystar University</span>
+                        <div>
+                            <span class="label">Education</span>
+                            <span class="value">Daystar University</span>
+                        </div>
                     </div>
-                    <div class="info-item">
+                    <div class="info-card">
                         <i class="fas fa-book"></i>
-                        <span>Computer Science</span>
+                        <div>
+                            <span class="label">Major</span>
+                            <span class="value">Computer Science</span>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-calendar"></i>
-                        <span>4th Year Student</span>
+                    <div class="info-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <span class="label">Status</span>
+                            <span class="value">4th Year Student</span>
+                        </div>
                     </div>
-                    <div class="info-item">
+                    <div class="info-card">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Kenya</span>
+                        <div>
+                            <span class="label">Location</span>
+                            <span class="value">Kenya</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,188 +107,263 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="section-title">
+    <section id="skills">
+        <div class="section-header fade-in">
             <h2>My Skills</h2>
-            <p>Technologies and tools I work with</p>
+            <p>Technologies and tools I work with to bring ideas to life.</p>
         </div>
-        <div class="skills-table-container">
-            <table class="skills-table">
-                <thead>
-                    <tr>
-                        <th>Skill Area</th>
-                        <th>Technologies/Tools</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Mobile Development</td>
-                        <td>Flutter (iOS & Android)</td>
-                    </tr>
-                    <tr>
-                        <td>Web Development</td>
-                        <td>HTML, CSS, JavaScript</td>
-                    </tr>
-                    <tr>
-                        <td>Database Management</td>
-                        <td>MySQL, PostgreSQL</td>
-                    </tr>
-                    <tr>
-                        <td>Python Development</td>
-                        <td>Applications, Data Analysis</td>
-                    </tr>
-                    <tr>
-                        <td>Version Control</td>
-                        <td>Git, GitHub</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="skills-bento fade-in">
+            <div class="skill-category">
+                <div class="skill-category-header">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                </div>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML5 & CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">TailwindCSS</span>
+                    <span class="skill-tag">Material UI</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend & Data</h3>
+                </div>
+                <div class="skill-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">PHP</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-header">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Development</h3>
+                </div>
+                <div class="skill-list">
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">Dart</span>
+                    <span class="skill-tag">iOS</span>
+                    <span class="skill-tag">Android</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning</h3>
+                </div>
+                <div class="skill-list">
+                    <span class="skill-tag">Data Analysis</span>
+                    <span class="skill-tag">Jupyter Notebook</span>
+                    <span class="skill-tag">Classification</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="section-title">
-            <h2>My Projects</h2>
-            <p>View some of my works </p>
+    <section id="projects">
+        <div class="section-header fade-in">
+            <h2>Featured Work</h2>
+            <p>A selection of my most recent projects — spanning full-stack systems, AI integrations, and hosted web apps.</p>
         </div>
-        <div class="projects-grid">
-            <!------ project 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="project-info">
-                    <h3><a href="https://daystar-sdg-impact-and-evidence-gen.vercel.app/" target="_blank">Daystar SDG Impact and Evidence Generator</a></h3>
-                    <p>JavaScript project for generating impact and evidence reports for SDGs at Daystar University.</p>
+
+        <!-- Featured Recent Projects -->
+        <div class="featured-projects fade-in">
+
+            <!-- Grants Intelligence Hub -->
+            <div class="featured-card">
+                <div class="featured-card-left">
+                    <span class="featured-badge">Latest Project</span>
+                    <div class="project-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Grants Intelligence Hub</h3>
+                    <p>A full-stack data intelligence platform designed to help organizations discover, track, and manage grant opportunities. Features an AI-powered chatbot for grant-related queries, interactive dashboards for visualizing funding trends, and a robust backend for data collection and analysis.</p>
                     <div class="project-tags">
-                        <span>React </span>
-                        <span>TailwindCSS </span>
-                        <span>Django </span>
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>React</span>
+                        <span>PostgreSQL</span>
+                        <span>AI Chatbot</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Michemor/grants_hub" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+                        <a href="https://grants-intelligence-hub.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+                <div class="featured-card-right">
+                    <div class="featured-iframe-wrapper">
+                        <iframe src="https://grants-intelligence-hub.vercel.app/" title="Grants Intelligence Hub" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
-            <!------ project 2 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-store"></i>
-                </div>
-                <div class="project-info">
-                    <h3><a href="https://github.com/Michemor/tech-today-sales-frontend" target="_blank">Tech Today Sales Frontend</a></h3>
-                    <p>Frontend for a sales management system, built with modern JavaScript frameworks.</p>
+
+            <!-- Leave Management System -->
+            <div class="featured-card featured-card-reverse">
+                <div class="featured-card-left">
+                    <span class="featured-badge">Recent Project</span>
+                    <div class="project-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Leave Management System</h3>
+                    <p>A comprehensive full-stack Leave Management System built for organizations to streamline employee leave applications, approvals, and reporting. Includes role-based access for employees and administrators, leave policy configuration, sick leave document uploads, and detailed leave history reporting.</p>
                     <div class="project-tags">
                         <span>React</span>
-                        <span>Material UI</span>
-                        <span>Frontend</span>
-                    </div>
-                </div>
-            </div>
-            <!------ project 3 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-server"></i>
-                </div>
-                <div class="project-info">
-                    <h3><a href="https://github.com/Michemor/tech-today-sales-backend" target="_blank">Tech Today Sales Backend</a></h3>
-                    <p>Backend API for Tech Today Sales, built with Python for robust data management.</p>
-                    <div class="project-tags">
                         <span>Python</span>
-                        <span>Backend</span>
+                        <span>Django REST</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Michemor/lms-frontend" target="_blank"><i class="fab fa-github"></i> Frontend Repo</a>
+                        <a href="https://github.com/Michemor/lms-backend" target="_blank"><i class="fab fa-github"></i> Backend Repo</a>
+                        <a href="https://leavemanagementfrontend.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+                <div class="featured-card-right">
+                    <div class="featured-iframe-wrapper">
+                        <iframe src="https://leavemanagementfrontend.vercel.app" title="Leave Management System" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!------ project 4 ------>
+        <!-- Other Projects -->
+        <div class="section-header fade-in" style="margin-top: 80px;">
+            <h2>Other Projects</h2>
+            <p>More work from my portfolio.</p>
+        </div>
+        <div class="projects-grid fade-in">
+
+            <!-- Taxlingo RAG Application -->
             <div class="project-card">
-                <div class="project-image">
+                <div class="project-icon">
                     <i class="fas fa-robot"></i>
                 </div>
-                <div class="project-info">
-                    <h3><a href="https://github.com/Michemor/GBV_tweet_classification" target="_blank">GBV Tweet Classification</a></h3>
-                    <p>Machine learning project for classifying tweets related to Gender-Based Violence using Jupyter Notebook.</p>
+                <div class="project-content">
+                    <h3>Taxlingo — RAG Tax Assistant</h3>
+                    <p>An AI-powered Retrieval-Augmented Generation (RAG) application designed to simplify tax knowledge in Kenya. Users can ask natural-language questions about KRA tax regulations, VAT, PAYE, and filing requirements, and receive accurate, context-grounded answers sourced directly from official tax documents — eliminating the complexity of navigating dense tax legislation.</p>
                     <div class="project-tags">
                         <span>Python</span>
-                        <span>ML</span>
+                        <span>RAG</span>
+                        <span>LangChain</span>
+                        <span>Vector DB</span>
+                        <span>LLM</span>
+                        <span>Django</span>
+                        <span>React</span>
                     </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Michemor/Taxlingo" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+                    <a href="https://taxlingo.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
             </div>
 
-            <!------ project 5 -->
+            <!-- Translation System -->
             <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-car"></i>
+                <div class="project-icon">
+                    <i class="fas fa-language"></i>
                 </div>
-                <div class="project-info">
-                    <h3><a href="https://github.com/Michemor/motor-gi.io" target="_blank">Motor GI.io</a></h3>
-                    <p>Python project for motor insurance and management.</p>
+                <div class="project-content">
+                    <h3>School Translation System</h3>
+                    <p>A frontend application built for a school to help students translate academic materials into multiple languages. The platform enables learners to upload or paste school content and receive accurate translations, breaking language barriers and making education more accessible to students from diverse linguistic backgrounds.</p>
                     <div class="project-tags">
+                        <span>React</span>
+                        <span>Django REST</span>
+                        <span>Translation API</span>
                         <span>Python</span>
-                        <span>Streamlit</span>
                     </div>
                 </div>
+                <div class="project-links">
+                    <a href="https://github.com/Michemor" target="_blank"><i class="fab fa-github"></i> GitHub Profile</a>
+                </div>
             </div>
+
+            <!-- Daystar SDG -->
             <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-utensils"></i>
+                <div class="project-icon">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-                <div class="project-info">
-                    <h3><a href="https://github.com/Michemor/Dorcas_Pantry" target="_blank">Dorcas Pantry</a></h3>
-                    <p>Dart project for project management and inventory tracking.</p>
+                <div class="project-content">
+                    <h3>Daystar SDG Impact & Evidence Generator</h3>
+                    <p>A web platform for generating structured impact and evidence reports for SDG-aligned initiatives at Daystar University. Helps faculty and researchers document and communicate their sustainable development contributions.</p>
                     <div class="project-tags">
-                        <span>Dart</span>
-                        <span>Flutter</span>
-                        <span>PHP</span>
-                        <span>MySQL</span>
+                        <span>React</span>
+                        <span>TailwindCSS</span>
+                        <span>Django</span>
                     </div>
                 </div>
+                <div class="project-links">
+                    <a href="https://github.com/Michemor/Daystar-SDG-Impact-and-Evidence-Generator" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+                    <a href="https://daystar-sdg-impact-and-evidence-gen.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
             </div>
+
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="section-title">
-            <h2>Get In Touch</h2>
-            <p>Feel free to reach out for collaborations or just a friendly hello</p>
-        </div>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Let's Connect!</h3>
-                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <strong>Email</strong><br>
-                        <a href="mailto:yatoijema@gmail.com">yatoijema@gmail.com</a>
+    <section id="contact">
+        <div class="contact fade-in">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                        visions.</p>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:yatoijema@gmail.com">yatoijema@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+254759091684">+254 759 091 684</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Kenya</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/michemor" target="_blank" title="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <strong>Phone</strong><br>
-                        <a href="tel:+254759091684">+254 759 091 684</a>
+
+                <form class="contact-form" action="https://formspree.io/f/xkojppbz" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <strong>Location</strong><br>
-                        Kenya
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/michemor" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button class="btn" type="submit">Send Message</button>
+                </form>
             </div>
-            <form class="contact-form" action="https://formspree.io/f/xkojppbz" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="subject" placeholder="Subject">
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button class="submit-btn" type="submit">Send Message</button>
-            </form>
         </div>
     </section>
 
@@ -267,54 +373,71 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                document.querySelector('.nav-links').classList.remove('active');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
             });
         });
 
-        // Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
+        // Navbar Scroll Effect & Active Link Highlight
+        const navbar = document.getElementById('navbar');
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            // Navbar shadow
             if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+                navbar.classList.add('scrolled');
             } else {
-                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                navbar.classList.remove('scrolled');
             }
+
+            // Active link highlighting
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes(current)) {
+                    item.classList.add('active');
+                }
+            });
         });
 
-        // Animate elements on scroll
+        // Intersection Observer for Animations
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: "0px 0px -50px 0px"
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.skill-card, .project-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
     </script>
 </body>
+
 </html>
