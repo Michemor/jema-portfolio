@@ -42,8 +42,22 @@ function rebuildManifest() {
   // List all image files currently in the dashboards folder
   let files = [];
   try {
-    files = fs.readdirSync(DASHBOARDS_DIR).filter(f => {
+    const raw = fs.readdirSync(DASHBOARDS_DIR).filter(f => {
       return IMAGE_EXTS.has(path.extname(f).toLowerCase());
+    });
+
+    // Auto-rename any files with uppercase characters to lowercase
+    // (prevents case-sensitivity issues on Linux hosts like Cloudflare Pages)
+    files = raw.map(f => {
+      const lower = f.toLowerCase();
+      if (f !== lower) {
+        fs.renameSync(
+          path.join(DASHBOARDS_DIR, f),
+          path.join(DASHBOARDS_DIR, lower)
+        );
+        console.log(`🔡  Renamed "${f}" → "${lower}" (enforcing lowercase for hosting)`);
+      }
+      return lower;
     });
   } catch (err) {
     console.error('❌  Could not read dashboards folder:', err.message);
