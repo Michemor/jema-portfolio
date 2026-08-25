@@ -20,6 +20,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#data-engineering">Data</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger" id="hamburger">
@@ -302,6 +304,87 @@
             </div>
 
         </div>
+
+        <!-- ====== Data Engineering & Analytics Subsection ====== -->
+        <div id="data-engineering" class="de-section fade-in">
+            <div class="de-section-header">
+                <div class="de-header-top">
+                    <span class="de-eyebrow"><i class="fas fa-database"></i> Data Engineering & Analytics</span>
+                    <p>Transforming raw data into actionable insights through pipelines, dashboards, and analytics.</p>
+                </div>
+            </div>
+
+            <!-- Skills Strip -->
+            <div class="de-skills-strip">
+                <span class="de-pill"><i class="fas fa-chart-bar"></i> Power BI</span>
+                <span class="de-pill"><i class="fab fa-python"></i> Python</span>
+                <span class="de-pill"><i class="fas fa-table"></i> Pandas &amp; NumPy</span>
+                <span class="de-pill"><i class="fas fa-database"></i> SQL</span>
+                <span class="de-pill"><i class="fas fa-exchange-alt"></i> ETL Pipelines</span>
+                <span class="de-pill"><i class="fas fa-broom"></i> Data Cleaning</span>
+                <span class="de-pill"><i class="fas fa-chart-line"></i> Data Visualization</span>
+            </div>
+
+            <!-- Dashboard Cards — auto-populated from assets/manifest.json -->
+            <div class="dashboard-grid" id="dashboard-gallery">
+                <!-- Cards are injected here dynamically by renderDashboards() -->
+            </div>
+
+            <!-- Empty state shown when no images are in assets/dashboards/ -->
+            <div class="de-empty-state" id="de-empty-state" style="display:none;">
+                <i class="fas fa-images"></i>
+                <p>Drop your dashboard screenshots into <code>assets/dashboards/</code> and run <code>npm run watch</code> to publish them here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="section-header fade-in">
+            <h2>Certifications</h2>
+            <p>Professional credentials that validate my skills and commitment to continuous learning.</p>
+        </div>
+        <div class="cert-grid fade-in">
+
+            <!-- ALX Data Engineering -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-issuer">ALX Africa</span>
+                    <h3>Data Engineering Program</h3>
+                    <p>An intensive professional program covering Python for data, SQL, ETL pipeline design, data warehousing concepts, and business intelligence tools including Power BI.</p>
+                    <div class="cert-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>ETL</span>
+                        <span>Power BI</span>
+                        <span>Data Warehousing</span>
+                    </div>
+                </div>
+                <div class="cert-badge">Expected: Nov 2026</div>
+            </div>
+
+             <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="cert-content">
+                    <span class="cert-issuer">ALX Africa</span>
+                    <h3>Data Analysis Program</h3>
+                    <p>An intensive professional program covering SQL, Data analysis concepts, and business intelligence tools including Power BI.</p>
+                    <p> In addition, I gained data processing skills in Python programming language </p>
+                    <div class="cert-tags">
+                        <span>SQL</span>
+                        <span>Excel</span>
+                        <span>Power BI</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="cert-badge">Certified</div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
@@ -435,6 +518,81 @@
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
+
+        // ── Dynamic Dashboard Gallery ──────────────────────────────────────────
+        // Reads assets/manifest.json and renders dashboard cards automatically.
+        // No manual HTML needed — just drop images into assets/dashboards/ and
+        // run: npm run watch
+
+        async function renderDashboards() {
+            const gallery    = document.getElementById('dashboard-gallery');
+            const emptyState = document.getElementById('de-empty-state');
+            if (!gallery) return;
+
+            let manifest;
+            try {
+                const res = await fetch('assets/manifest.json?v=' + Date.now());
+                if (!res.ok) throw new Error('manifest not found');
+                manifest = await res.json();
+            } catch {
+                // Manifest missing or unreadable — show empty state
+                gallery.style.display    = 'none';
+                emptyState.style.display = 'flex';
+                return;
+            }
+
+            const dashboards = manifest.dashboards || [];
+
+            if (dashboards.length === 0) {
+                gallery.style.display    = 'none';
+                emptyState.style.display = 'flex';
+                return;
+            }
+
+            gallery.style.display    = '';
+            emptyState.style.display = 'none';
+
+            // Build and inject cards
+            gallery.innerHTML = dashboards.map(d => {
+                const imgSrc      = `assets/dashboards/${d.filename}`;
+                const title       = d.title       || d.filename;
+                const description = d.description || '';
+                const tool        = d.tool        || 'Power BI';
+                const tags        = Array.isArray(d.tags) ? d.tags : [];
+                const link        = d.link        || '';
+
+                const tagHTML = tags.map(t => `<span>${t}</span>`).join('');
+                const linkBtn = link
+                    ? `<a href="${link}" target="_blank" rel="noopener" class="dashboard-link">
+                           <i class="fas fa-external-link-alt"></i> View Dashboard
+                       </a>`
+                    : '';
+
+                return `
+                <div class="dashboard-card fade-in">
+                    <div class="dashboard-img-wrapper">
+                        <img src="${imgSrc}" alt="${title}" loading="lazy">
+                        <div class="dashboard-overlay">
+                            <span class="overlay-label"><i class="fas fa-expand-alt"></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-body">
+                        <div class="dashboard-meta">
+                            <span class="dashboard-tool"><i class="fas fa-chart-bar"></i> ${tool}</span>
+                        </div>
+                        <h3>${title}</h3>
+                        ${description ? `<p>${description}</p>` : ''}
+                        ${tagHTML ? `<div class="project-tags">${tagHTML}</div>` : ''}
+                        ${linkBtn}
+                    </div>
+                </div>`;
+            }).join('');
+
+            // Re-observe newly injected fade-in elements
+            gallery.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+
+        renderDashboards();
     </script>
 </body>
 

@@ -1,0 +1,13 @@
+{
+  "name": "jema-portfolio",
+  "version": "1.0.0",
+  "description": "Michelle Jemator portfolio site",
+  "scripts": {
+    "watch": "node scripts/watch-assets.js",
+    "serve": "npx live-server --port=3000 --open=index.html",
+    "dev": "concurrently \"npm run watch\" \"npm run serve\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

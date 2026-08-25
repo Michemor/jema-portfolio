@@ -1,0 +1,28 @@
+{
+  "dashboards": [
+    {
+      "filename": "Dashboard1.png",
+      "title": "Dashboard1",
+      "description": "Replace this with a description of what this dashboard shows.",
+      "tool": "Power BI",
+      "tags": [
+        "Power BI",
+        "DAX",
+        "Data Modeling"
+      ],
+      "link": ""
+    },
+    {
+      "filename": "dashboard2.png",
+      "title": "Dashboard2",
+      "description": "Replace this with a description of what this dashboard shows.",
+      "tool": "Power BI",
+      "tags": [
+        "Power BI",
+        "DAX",
+        "Data Modeling"
+      ],
+      "link": ""
+    }
+  ]
+}

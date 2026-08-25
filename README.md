@@ -1,16 +1,27 @@
-# Michelle Jemator
-Welcome to my personal portfolio! I am a 4th year computer science student at Daystar University.
+# Michelle Jemator — Portfolio
+
+Welcome to my portfolio! I am a Full-Stack Developer and soon-to-be Applied Computer Science graduate from Daystar University, currently awaiting graduation.
 
 ## About Me
-I am passionate about technology particularly in Software Development and Machine Learning.
-Currently taking a Data Science course with ALX Kenya.
+
+I build scalable, data-driven solutions with a focus on Africa's evolving tech landscape. My expertise spans full-stack web and mobile development, data engineering, and AI/ML integrations. I hold ALX Africa certifications in Data Engineering and Data Analysis, and have hands-on experience delivering production-grade systems including an AI-powered grants intelligence platform and enterprise leave management systems.
 
 ## Skills
-- Frontend Mobile Development using Flutter
-- Web development; HTML/CSS/Javascript
-- MySQL
-- Backend Development using Python
-- Versioning using Github/Git
+
+- **Full-Stack Web Development** — React, Django REST, HTML/CSS/JavaScript
+- **Mobile Development** — Flutter, Dart (iOS & Android)
+- **Data Engineering** — Python, Pandas, SQL, ETL Pipelines, Power BI
+- **Backend & Databases** — PostgreSQL, MySQL, PHP
+- **Machine Learning** — Data Analysis, Classification, Jupyter Notebooks
+- **DevOps & Tools** — Git/GitHub, Vercel, Cloudflare Pages
+
+## Certifications
+
+- ALX Africa — Data Engineering Program *(Expected: Nov 2026)*
+- ALX Africa — Data Analysis Program
 
 ## Contact
-You can reach me through my phone number +254 759091684 or email yatoijema@gmail.com
+
+- 📧 yatoijema@gmail.com
+- 📞 +254 759 091 684
+- 🐙 [github.com/Michemor](https://github.com/Michemor)
